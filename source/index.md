@@ -2,9 +2,7 @@
 title: API Reference
 
 language_tabs:
-  - shell
-  - ruby
-  - python
+  - json
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
@@ -16,149 +14,142 @@ includes:
 search: true
 ---
 
-# Cloud Foundry API Docs
+# Packages
 
-Welcome to the Cloud Foundry API!
+## List all Packages
 
-# Authentication
-
-> To authorize, use this code:
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
+```
+Example Request
 ```
 
-```python
-import kittn
+>curl "https://api.[your-domain.com]/v3/packages?page=1&per_page=2" -X GET \
+	-H "Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOi
+	JIUzI1NiJ9.eyJ1c2VyX2lkIjoidWFhLWlkLTgwIiwiZW1haWwiO
+	iJlbWFpbC03OEBzb21lZG9tYWluLmNvbSIsInNjb3BlIjpbImNsb
+	3VkX2NvbnRyb2xsZXIucmVhZCIsImNsb3VkX2NvbnRyb2xsZXIud
+	3JpdGUiXSwiYXVkIjpbImNsb3VkX2NvbnRyb2xsZXIiXSwiZXhwI
+	joxNDQ3MTE2ODM0fQ.uFg_L2PmTN9LnRDzKqOhCHZqdCYJhiuLt9
+	z2mV0cy9E" \
+	-H "Host: example.org" \
+	-H "Cookie: "
 
-api = kittn.authorize('meowmeowmeow')
 ```
-
-```shell
-# With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
+Example Response
 ```
-
-> Make sure to replace `meowmeowmeow` with your API key.
-
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
-
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
-
-`Authorization: meowmeowmeow`
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-
-# Kittens
-
-## Get All Kittens
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get()
-```
-
-```shell
-curl "http://example.com/api/kittens"
-  -H "Authorization: meowmeowmeow"
-```
-
-> The above command returns JSON structured like this:
-
-```json
-[
-  {
-    "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
-  },
-  {
-    "id": 2,
-    "name": "Isis",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
-  }
-]
-```
-
-This endpoint retrieves all kittens.
-
-### HTTP Request
-
-`GET http://example.com/api/kittens`
-
-### Query Parameters
-
-Parameter | Default | Description
---------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-
-## Get a Specific Kitten
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```shell
-curl "http://example.com/api/kittens/2"
-  -H "Authorization: meowmeowmeow"
-```
-
-> The above command returns JSON structured like this:
 
 ```json
 {
-  "id": 2,
-  "name": "Isis",
-  "breed": "unknown",
-  "fluffiness": 5,
-  "cuteness": 10
+  "pagination": {
+    "total_results": 3,
+    "first": {
+      "href": "/v3/packages?page=1&per_page=2"
+    },
+    "last": {
+      "href": "/v3/packages?page=2&per_page=2"
+    },
+    "next": {
+      "href": "/v3/packages?page=2&per_page=2"
+    },
+    "previous": null
+  },
+  "resources": [
+    {
+      "guid": "guid-a57fd932-85db-483a-a27e-b00efbb3b0a4",
+      "type": "bits",
+      "data": {
+        "hash": {
+          "type": "sha1",
+          "value": null
+        },
+        "error": null
+      },
+      "state": "AWAITING_UPLOAD",
+      "created_at": "2015-11-03T00:53:54Z",
+      "updated_at": null,
+      "links": {
+        "self": {
+          "href": "/v3/packages/guid-a57fd932-85db-483a-a27e-b00efbb3b0a4"
+        },
+        "upload": {
+          "href": "/v3/packages/guid-a57fd932-85db-483a-a27e-b00efbb3b0a4/upload",
+          "method": "POST"
+        },
+        "download": {
+          "href": "/v3/packages/guid-a57fd932-85db-483a-a27e-b00efbb3b0a4/download",
+          "method": "GET"
+        },
+        "stage": {
+          "href": "/v3/packages/guid-a57fd932-85db-483a-a27e-b00efbb3b0a4/droplets",
+          "method": "POST"
+        },
+        "app": {
+          "href": "/v3/apps/guid-fa3558ce-1c4d-46fc-9776-54b9c8021745"
+        }
+      }
+    },
+    {
+      "guid": "guid-8f1f294d-cef8-4c11-9f0b-3bcdc0bd2691",
+      "type": "docker",
+      "data": {
+        "hash": {
+          "type": "sha1",
+          "value": null
+        },
+        "error": null,
+        "image": "http://location-of-image.com",
+        "credentials": {
+
+        },
+        "store_image": false
+      },
+      "state": "READY",
+      "created_at": "2015-11-03T00:53:54Z",
+      "updated_at": null,
+      "links": {
+        "self": {
+          "href": "/v3/packages/guid-8f1f294d-cef8-4c11-9f0b-3bcdc0bd2691"
+        },
+        "app": {
+          "href": "/v3/apps/guid-fa3558ce-1c4d-46fc-9776-54b9c8021745"
+        }
+      }
+    }
+  ]
 }
 ```
 
-This endpoint retrieves a specific kitten.
-
-<aside class="warning">If you're not using an administrator API key, note that some kittens will return 403 Forbidden if they are hidden for admins only.</aside>
+This endpoint retrieves all the packages.
 
 ### HTTP Request
 
-`GET http://example.com/kittens/<ID>`
+`GET /v3/packages?page=1&per_page=2`
 
-### URL Parameters
+### Query Parameters
 
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to retrieve
+Name | Description | Valid Values | Example Values
+--------- | ------- | ----------- | --------------
+page | Page to display | >= 1 | 1
+per_page | Number of results per page | 1-5000 | 2
 
+### Request Headers
+
+`Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidWFhLWlkLTgwIiwiZW1haWwiOiJlbWFpbC03OEBzb21lZG9tYWluLmNvbSIsInNjb3BlIjpbImNsb3VkX2NvbnRyb2xsZXIucmVhZCIsImNsb3VkX2NvbnRyb2xsZXIud3JpdGUiXSwiYXVkIjpbImNsb3VkX2NvbnRyb2xsZXIiXSwiZXhwIjoxNDQ3MTE2ODM0fQ.uFg_L2PmTN9LnRDzKqOhCHZqdCYJhiuLt9z2mV0cy9E`
+
+`Host: example.org`
+
+`Cookie:`
+
+
+### Response Status
+
+`200 OK`
+
+### Response Headers
+
+`Content-Type: application/json;charset=utf-8`
+
+`X-VCAP-Request-ID: ab2917b8-b842-4425-aa8f-7c3ff33d9680`
+
+`Content-Length: 1933`
+
+`X-Content-Type-Options: nosniff`
