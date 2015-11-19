@@ -1,12 +1,7 @@
 # Packages
 
-Packages are the 'source code' of your application.
+A package is an application's 'source code'; either raw bits for your application or a pointer to these bits.
 
-In Cloud Foundry, packages are staged to produce an executable Droplet.
-
-We currently support 2 types of packages:
-
-* raw bits
-* Docker
+In Cloud Foundry, packages are staged to produce an executable Droplet. We currently support raw bits and Docker packages.
 
 
