@@ -1,5 +1,3 @@
-# Packages
-
 ## List all Packages
 
 ```
