@@ -13,6 +13,7 @@ includes:
   - packages/list
   - packages/create
   - packages/stage
+  - packages/upload_bits
   - errors
 
 search: true
