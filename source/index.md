@@ -11,6 +11,7 @@ toc_footers:
 includes:
   - general/header
   - packages/header
+  - packages/get
   - packages/list
   - packages/create
   - packages/stage

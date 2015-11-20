@@ -4,38 +4,45 @@
 Definition
 ```
 
-```json
-GET /v3/packages/guid-44f7c078-0934-470f-9883-4fcddc5b8f13
+```http
+GET /v3/packages/guid-44f7c078-0934-470f-9883-4fcddc5b8f13 HTTP/1.1
+```
+
+```
+Command
+```
+
+```shell
+$ curl "https://api.[your-domain.com]/v3/packages/guid-44f7c078-0934-470f-9883-4fcddc5b8f13" -X GET \
+ 	-H "Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidWFhLWlkLTQ2MCIsImVtYWlsIjoiZW1haWwtMzI3QHNvbWVkb21haW4uY29tIiwic2NvcGUiOlsiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSJdLCJhdWQiOlsiY2xvdWRfY29udHJvbGxlciJdLCJleHAiOjE0NDgwMzg5NzZ9.vtT67q5GwHPbxQc17QzjK5l_ZofuXl-ABTFrxO5N-x0" \
+ 	-H "Host: example.org" \
+ 	-H "Cookie: "
 ```
 
 ```
 Example Request
+```
 
+```http
+GET /v3/packages/guid-44f7c078-0934-470f-9883-4fcddc5b8f13 HTTP/1.1
 Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidWFhLWlkLTQ2MCIsImVtYWlsIjoiZW1haWwtMzI3QHNvbWVkb21haW4uY29tIiwic2NvcGUiOlsiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSJdLCJhdWQiOlsiY2xvdWRfY29udHJvbGxlciJdLCJleHAiOjE0NDgwMzg5NzZ9.vtT67q5GwHPbxQc17QzjK5l_ZofuXl-ABTFrxO5N-x0
 Host: example.org
 Cookie:
 ```
 
->curl "https://api.[your-domain.com]/v3/packages/guid-44f7c078-0934-470f-9883-4fcddc5b8f13" -X GET \
- 	-H "Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidWFhLWlkLTQ2MCIsImVtYWlsIjoiZW1haWwtMzI3QHNvbWVkb21haW4uY29tIiwic2NvcGUiOlsiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSJdLCJhdWQiOlsiY2xvdWRfY29udHJvbGxlciJdLCJleHAiOjE0NDgwMzg5NzZ9.vtT67q5GwHPbxQc17QzjK5l_ZofuXl-ABTFrxO5N-x0" \
- 	-H "Host: example.org" \
- 	-H "Cookie: "
 
 ```
 Example Response
+```
 
-200 OK
-`X-Frame-Options: SAMEORIGIN`
-
-`X-XSS-Protection: 1; mode=block`
-
-`X-Content-Type-Options: nosniff`
-
-`Content-Type: application/json; charset=utf-8`
-
-`X-Runtime: 0.014007`
+```http
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Content-Type: application/json; charset=utf-8
+X-Runtime: 0.014007
 Content-Length: 840
-
 ```
 
 ```json
@@ -82,10 +89,5 @@ This endpoint retrieves a specific package.
 
 N/A
 
-
-### Response Status
-
-
-### Response Headers
 
 
