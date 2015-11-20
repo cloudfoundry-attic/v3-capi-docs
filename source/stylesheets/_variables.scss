@@ -21,11 +21,18 @@ under the License.
 // Use these settings to help adjust the appearance of Slate
 
 
+// CODE TAB LANGUAGES
+////////////////////
+$lexed-languages: ("json", "http", "shell", "ruby", "golang");   // used to style code blocks written in a language differently from plaintext code blocks
+                                                                  // drawn from the Rouge lexer: http://rouge.jayferd.us/demo
+                                                                  // only languages used in our docs are listed thus far
+
+
 // BACKGROUND COLORS
 ////////////////////
 $nav-bg: #393939;
 $examples-bg: #393939;
-$code-bg: #292929;
+$code-bg: #393939;
 $code-annotation-bg: #1c1c1c;
 $nav-subitem-bg: #262626;
 $nav-active-bg: #2467af;
