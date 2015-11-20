@@ -67,7 +67,10 @@ $nav-padding: 15px; // padding to left and right of navbar
 $nav-v-padding: 10px; // padding used vertically around search boxes and results
 $nav-indent: 10px; // extra padding for ToC subitems
 $code-annotation-padding: 13px; // padding inside code annotations
-$h1-margin-bottom: 21px; // padding under the largest header tags
+$h1-margin-top: 0px; // margin above the largest header tags - added to allow lining up code blocks
+$h1-margin-bottom: 0px; // margin under the largest header tags - cleared to allow lining up code blocks
+$section-divide-margin: 0px; // margin at bottom of a section (p + div + h2) - added to allow lining up code blocks
+$section-divide-padding: 1.7em; // add the removed margin at section borders as padding - added to allow lining up of code blocks
 $tablet-width: 930px; // min width before reverting to tablet size
 $phone-width: $tablet-width - $nav-width; // min width before reverting to mobile size
 

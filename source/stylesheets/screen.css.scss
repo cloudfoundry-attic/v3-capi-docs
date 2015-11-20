@@ -361,7 +361,7 @@ html, body {
     padding-bottom: 0.5em;
     border-bottom: 1px solid #ccc;
     margin-bottom: $h1-margin-bottom;
-    margin-top: 2em;
+    margin-top: $h1-margin-top;
     border-top: 1px solid #ddd;
     background-image: linear-gradient(to bottom, #fff, #f9f9f9);
   }
@@ -374,7 +374,7 @@ html, body {
   h2 {
     @extend %header-font;
     font-size: 20px;
-    margin-top: 4em;
+    margin-top: $section-divide-margin;
     margin-bottom: 0;
     border-top: 1px solid #ccc;
     padding-top: 1.2em;
@@ -388,6 +388,18 @@ html, body {
     margin-top: $h1-margin-bottom * -1;
     border-top: none;
   }
+
+  // Eliminate right-panel margin at p + h* border
+  // Replace space-creating margin with padding
+  p + div + h2 {
+    margin-bottom: $section-divide-margin;
+    padding-bottom: $section-divide-padding;
+  }
+  h1 + p, h1 + pre + p {
+    margin-top: $section-divide-margin;
+    padding-top: $section-divide-padding;
+  }
+
 
   h3, h4, h5, h6 {
     @extend %header-font;
