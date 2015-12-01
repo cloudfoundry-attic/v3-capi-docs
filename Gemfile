@@ -10,3 +10,4 @@ gem 'rouge'
 gem 'redcarpet'
 
 gem 'rake'
+gem 'therubyracer'
