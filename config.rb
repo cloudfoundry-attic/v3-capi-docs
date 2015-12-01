@@ -15,7 +15,6 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 set :fonts_dir, 'fonts'
 
-# Activate the syntax highlighter
 activate :syntax
 
 activate :autoprefixer do |config|
@@ -23,6 +22,8 @@ activate :autoprefixer do |config|
   config.cascade  = false
   config.inline   = true
 end
+
+activate :livereload
 
 # Github pages require relative links
 activate :relative_assets
