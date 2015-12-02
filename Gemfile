@@ -5,7 +5,6 @@ gem 'middleman'
 gem 'middleman-gh-pages'
 gem 'middleman-syntax'
 gem 'middleman-autoprefixer'
-gem 'middleman-livereload'
 gem 'rouge'
 gem 'redcarpet'
 
