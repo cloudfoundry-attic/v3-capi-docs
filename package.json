@@ -1,0 +1,19 @@
+{
+  "name": "api-docs",
+  "version": "1.0.0",
+  "description": "Cloud Foundry API Docs ========",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cloudfoundry-incubator/api-docs.git"
+  },
+  "author": "Cloud Foundry",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/cloudfoundry-incubator/api-docs/issues"
+  },
+  "homepage": "https://github.com/cloudfoundry-incubator/api-docs#readme"
+}
