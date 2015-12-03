@@ -12,7 +12,6 @@ includes:
   - packages/create
   - packages/stage
   - packages/upload_bits
-  - errors
 
 search: true
 ---
