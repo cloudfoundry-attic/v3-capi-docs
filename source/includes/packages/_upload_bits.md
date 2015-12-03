@@ -9,31 +9,17 @@ POST /v3/packages/:guid/upload HTTP/1.1
 ```
 
 ```
-Command
+Example Request
 ```
 
 ```shell
 curl "https://api.[your-domain.com]/v3/packages/[guid]/upload" \
-  -d '[body_parameters]' \
+  -F bits=@"package.zip" \
   -X POST \
   -H "Authorization: bearer [token]" \
   -H "Host: [host.com]" \
   -H "Content-Type: application/x-www-form-urlencoded" \
   -H "Cookie: "
-```
-
-```
-Example Request
-```
-
-```http
-POST /v3/packages/a910e72b-5483-4b21-b36a-21997b2d1f39/upload HTTP/1.1
-Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidWFhLWlkLTQ1NyIsImVtYWlsIjoiZW1haWwtMzI0QHNvbWVkb21haW4uY29tIiwic2NvcGUiOlsiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSJdLCJhdWQiOlsiY2xvdWRfY29udHJvbGxlciJdLCJleHAiOjE0NDgwMzg5NzZ9.JFF0J6G3YJTGfWiwzAR6nPJcRdgRqDc4_e44b_Z5QVw
-Host: example.org
-Content-Type: application/x-www-form-urlencoded
-Cookie: 
-
-bits_name=application.zip&bits_path=%2Ftmp%2Fd20151113-23102-6lnfn2%2Fapplication.zip
 ```
 
 ```
@@ -52,10 +38,8 @@ Content-Length: 860
 {
   "guid": "a910e72b-5483-4b21-b36a-21997b2d1f39",
   "type": "bits",
-  "data":
-  {
-    "hash":
-    {
+  "data": {
+    "hash": {
       "type": "sha1",
       "value": null
     },

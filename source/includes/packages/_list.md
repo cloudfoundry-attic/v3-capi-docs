@@ -9,7 +9,7 @@ GET /v3/packages HTTP/1.1
 ```
 
 ```
-Command
+Example Request
 ```
 
 ```shell
@@ -18,18 +18,6 @@ curl "https://api.[your-domain.com]/v3/packages?page=[page]&per_page=[per_page]"
   -H "Host: [host.com]" \
   -H "Cookie: "
 ```
-
-```
-Example Request
-```
-
-```http
-GET /v3/packages?page=1&per_page=2 HTTP/1.1
-Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidWFhLWlkLTgwIiwiZW1haWwiOiJlbWFpbC03OEBzb21lZG9tYWluLmNvbSIsInNjb3BlIjpbImNsb3VkX2NvbnRyb2xsZXIucmVhZCIsImNsb3VkX2NvbnRyb2xsZXIud3JpdGUiXSwiYXVkIjpbImNsb3VkX2NvbnRyb2xsZXIiXSwiZXhwIjoxNDQ3MTE2ODM0fQ.uFg_L2PmTN9LnRDzKqOhCHZqdCYJhiuLt9z2mV0cy9E
-Host: example.org
-Cookie: 
-```
-
 
 ```
 Example Response
@@ -43,19 +31,15 @@ Content-Length: 1933
 X-Content-Type-Options: nosniff
 
 {
-  "pagination":
-  {
+  "pagination": {
     "total_results": 3,
-    "first":
-    {
+    "first": {
       "href": "/v3/packages?page=1&per_page=2"
     },
-    "last":
-    {
+    "last": {
       "href": "/v3/packages?page=2&per_page=2"
     },
-    "next":
-    {
+    "next": {
       "href": "/v3/packages?page=2&per_page=2"
     },
     "previous": null
@@ -64,10 +48,8 @@ X-Content-Type-Options: nosniff
     {
       "guid": "a57fd932-85db-483a-a27e-b00efbb3b0a4",
       "type": "bits",
-      "data":
-      {
-        "hash":
-        {
+      "data": {
+        "hash": {
           "type": "sha1",
           "value": null
         },
@@ -76,29 +58,23 @@ X-Content-Type-Options: nosniff
       "state": "AWAITING_UPLOAD",
       "created_at": "2015-11-03T00:53:54Z",
       "updated_at": null,
-      "links":
-      {
-        "self":
-        {
+      "links": {
+        "self": {
           "href": "/v3/packages/a57fd932-85db-483a-a27e-b00efbb3b0a4"
         },
-        "upload":
-        {
+        "upload": {
           "href": "/v3/packages/a57fd932-85db-483a-a27e-b00efbb3b0a4/upload",
           "method": "POST"
         },
-        "download":
-        {
+        "download": {
           "href": "/v3/packages/a57fd932-85db-483a-a27e-b00efbb3b0a4/download",
           "method": "GET"
         },
-        "stage":
-        {
+        "stage": {
           "href": "/v3/packages/a57fd932-85db-483a-a27e-b00efbb3b0a4/droplets",
           "method": "POST"
         },
-        "app":
-        {
+        "app": {
           "href": "/v3/apps/fa3558ce-1c4d-46fc-9776-54b9c8021745"
         }
       }
@@ -106,32 +82,24 @@ X-Content-Type-Options: nosniff
     {
       "guid": "8f1f294d-cef8-4c11-9f0b-3bcdc0bd2691",
       "type": "docker",
-      "data":
-      {
-        "hash":
-        {
+      "data": {
+        "hash": {
           "type": "sha1",
           "value": null
         },
         "error": null,
         "image": "http://location-of-image.com",
-        "credentials":
-        {
-
-        },
+        "credentials": { },
         "store_image": false
       },
       "state": "READY",
       "created_at": "2015-11-03T00:53:54Z",
       "updated_at": null,
-      "links":
-      {
-        "self":
-        {
+      "links": {
+        "self": {
           "href": "/v3/packages/8f1f294d-cef8-4c11-9f0b-3bcdc0bd2691"
         },
-        "app":
-        {
+        "app": {
           "href": "/v3/apps/fa3558ce-1c4d-46fc-9776-54b9c8021745"
         }
       }

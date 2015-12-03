@@ -9,7 +9,7 @@ GET /v3/packages/:guid HTTP/1.1
 ```
 
 ```
-Command
+Example Request
 ```
 
 ```shell
@@ -17,17 +17,6 @@ $ curl "https://api.[your-domain.com]/v3/packages/[guid]" -X GET \
  	-H "Authorization: bearer [token]" \
  	-H "Host: [host.com]" \
  	-H "Cookie: "
-```
-
-```
-Example Request
-```
-
-```http
-GET /v3/packages/44f7c078-0934-470f-9883-4fcddc5b8f13 HTTP/1.1
-Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidWFhLWlkLTQ2MCIsImVtYWlsIjoiZW1haWwtMzI3QHNvbWVkb21haW4uY29tIiwic2NvcGUiOlsiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSJdLCJhdWQiOlsiY2xvdWRfY29udHJvbGxlciJdLCJleHAiOjE0NDgwMzg5NzZ9.vtT67q5GwHPbxQc17QzjK5l_ZofuXl-ABTFrxO5N-x0
-Host: example.org
-Cookie: 
 ```
 
 ```
@@ -46,10 +35,8 @@ Content-Length: 840
 {
   "guid": "44f7c078-0934-470f-9883-4fcddc5b8f13",
   "type": "bits",
-  "data":
-  {
-    "hash":
-    {
+  "data": {
+    "hash": {
       "type": "sha1",
       "value": null
     },
@@ -58,29 +45,23 @@ Content-Length: 840
   "state": "AWAITING_UPLOAD",
   "created_at": "2015-11-13T17:02:56Z",
   "updated_at": null,
-  "links":
-  {
-    "self":
-    {
+  "links": {
+    "self": {
       "href": "/v3/packages/44f7c078-0934-470f-9883-4fcddc5b8f13"
     },
-    "upload":
-    {
+    "upload": {
       "href": "/v3/packages/44f7c078-0934-470f-9883-4fcddc5b8f13/upload",
       "method": "POST"
     },
-    "download":
-    {
+    "download": {
       "href": "/v3/packages/44f7c078-0934-470f-9883-4fcddc5b8f13/download",
       "method": "GET"
     },
-    "stage":
-    {
+    "stage": {
       "href": "/v3/packages/44f7c078-0934-470f-9883-4fcddc5b8f13/droplets",
       "method": "POST"
     },
-    "app":
-    {
+    "app": {
       "href": "/v3/apps/1d3bf0ec-5806-43c4-b64e-8364dba1086a"
     }
   }
