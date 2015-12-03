@@ -113,11 +113,27 @@ X-Content-Type-Options: nosniff
 
 This endpoint stages a package. Staging a package creates a droplet.
 
-### Query Parameters
+### Body Parameters
 
-Name | Description | Default | Valid Values | Example Values
---------- | ------- | ----------- | -------------- | ------------
-environment_variables | Environment variables to use during staging. Environment variable names may not start with "VCAP_" or "CF_". "PORT" is not a valid environment variable. | | <ul><li>object</li></ul> | <ul><li>{"FEATURE_ENABLED": "true"}
-memory_limit | Memory limit used to stage package | | <ul><li>integer</li></ul> |
-disk_limit | Disk limit used to stage package | | <ul><li>integer</li></ul> |
-lifecycle | Lifecycle information for a droplet. If not provided, it will default to a buildpack. |  <ul><li>object</li></ul> | <ul><li>{ "type": "buildpack", "data": { "buildpack": "http://github.com/myorg/awesome-buildpack", "stack": "cflinuxfs2" } }</li></ul> |
+<ul class="method-list-group">
+  <li class="method-list-item">
+    <h4 class="method-list-item-label">environment_variables</h4>
+
+    <p class="method-list-item-description">JSON object of environment variables to use during staging. Environment variable names may not start with "VCAP_" or "CF_". "PORT" is not a valid environment variable. Example environment variables: {"FEATURE_ENABLED": "true"}</p>
+  </li>
+  <li class="method-list-item">
+    <h4 class="method-list-item-label">memory_limit</h4>
+
+    <p class="method-list-item-description">Memory limit used to stage package. Must be an integer.</p>
+  </li>
+  <li class="method-list-item">
+    <h4 class="method-list-item-label">disk_limit</h4>
+
+    <p class="method-list-item-description">Disk limit used to stage package. Must be an integer.</p>
+  </li>
+  <li class="method-list-item">
+    <h4 class="method-list-item-label">lifecycle</h4>
+
+    <p class="method-list-item-description">JSON object of lifecycle information for a droplet. If not provided, it will default to a buildpack. Example lifecycle information: { "type": "buildpack", "data": { "buildpack": "http://github.com/myorg/awesome-buildpack", "stack": "cflinuxfs2" } }</p>
+  </li>
+</ul>

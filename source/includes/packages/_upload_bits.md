@@ -48,39 +48,37 @@ Content-Length: 860
   "state": "PROCESSING_UPLOAD",
   "created_at": "2015-11-13T17:02:56Z",
   "updated_at": "2015-11-13T17:02:56Z",
-  "links":
-  {
-    "self":
-    {
+  "links": {
+    "self": {
       "href": "/v3/packages/a910e72b-5483-4b21-b36a-21997b2d1f39"
     },
-    "upload":
-    {
+    "upload": {
       "href": "/v3/packages/a910e72b-5483-4b21-b36a-21997b2d1f39/upload",
       "method": "POST"
     },
-    "download":
-    {
+    "download": {
       "href": "/v3/packages/a910e72b-5483-4b21-b36a-21997b2d1f39/download",
       "method": "GET"
     },
-    "stage":
-    {
+    "stage": {
       "href": "/v3/packages/a910e72b-5483-4b21-b36a-21997b2d1f39/droplets",
       "method": "POST"
     },
-    "app":
-    {
+    "app": {
       "href": "/v3/apps/104b5af3-7948-4212-ae49-9ef094cb212f"
     }
   }
 }
 ```
 
-This endpoint uploads bits to an existing package of type 'bits'.
+This endpoint uploads bits to an existing package of type 'bits'. The bits must be sent as part of a multi-part form
 
-### Query Parameters
+### Form Parameters
 
-Name | Description | Valid Values | Example Values
---------- | ----------- | --------------| -------------
-bits (*) | A binary zip file containing the package bits | |
+<ul class="method-list-group">
+  <li class="method-list-item">
+    <h4 class="method-list-item-label">bits</h4>
+
+    <p class="method-list-item-description">A binary zip file containing the package bits</p>
+  </li>
+</ul>

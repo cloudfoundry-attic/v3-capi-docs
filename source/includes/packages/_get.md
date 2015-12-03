@@ -69,11 +69,3 @@ Content-Length: 840
 ```
 
 This endpoint retrieves a specific package.
-
-
-### Query Parameters
-
-N/A
-
-
-

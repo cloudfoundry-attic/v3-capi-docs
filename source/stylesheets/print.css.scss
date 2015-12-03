@@ -39,7 +39,7 @@ body {
 
 .content {
   font-size: 12px;
-  background-color: $code-bg;
+  background-color: $code-background-color;
 
   pre, code {
     @extend %code-font;
