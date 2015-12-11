@@ -28,4 +28,4 @@ gulp.task('watch', function() {
   gulp.watch(['source/**/*'], ['middleman']);
 });
 
-gulp.task('default', ['webserver', 'watch']);
+gulp.task('default', ['middleman', 'webserver', 'watch']);
