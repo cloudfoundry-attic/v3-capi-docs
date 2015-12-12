@@ -18,7 +18,7 @@ gulp.task('middleman', function(cb) {
   });
 });
 
-gulp.task('webserver', function() {
+gulp.task('webserver', ['middleman'], function() {
   gulp.src('build').pipe(webserver({
     livereload: true
   }));
