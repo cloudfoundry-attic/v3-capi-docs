@@ -13,6 +13,8 @@ $font-size-s: 1em;
 $font-size-xls: 0.9em;
 $font-size-xs: 0.8em;
 
+$font-weight-light: 300;
+
 $navy: #243640;
 $gray1: #424242;
 $gray2: #686868;
@@ -57,6 +59,10 @@ $color-bg-header: $navy;
 $color-bg-dark: $bluegray1;
 
 $color-required-parameter: $froly-red;
+$color-no-body-parameters: $gray3;
+$color-no-body-parameters-border: $gray4;
+
+$weight-no-body-parameters: $font-weight-light;
 
 // ~COMPASS DEFAULTS
 // ===================================================

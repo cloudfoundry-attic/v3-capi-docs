@@ -35,3 +35,17 @@
   background: #fff;
   margin: 0 0 0 200px;
 }
+
+.no-body-parameters-required {
+  display: inline-block;
+  width: 100%;
+  padding: 20px 0;
+
+  text-align: center;
+  font-weight: $weight-no-body-parameters;
+  color: $color-no-body-parameters;
+
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: $color-no-body-parameters-border;
+}
