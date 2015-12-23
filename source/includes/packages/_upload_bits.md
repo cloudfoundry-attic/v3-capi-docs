@@ -77,7 +77,11 @@ This endpoint uploads bits to an existing package of type 'bits'. The bits must 
 
 <ul class="method-list-group">
   <li class="method-list-item">
-    <h4 class="method-list-item-label">bits</h4>
+    <h4 class="method-list-item-label">
+      bits
+
+      <span class="method-list-item-type method-list-item-type-required">required</span>
+    </h4>
 
     <p class="method-list-item-description">A binary zip file containing the package bits</p>
   </li>

@@ -84,27 +84,47 @@ This endpoint creates a new package.
 
 <ul class="method-list-group">
   <li class="method-list-item">
-    <h4 class="method-list-item-label">type</h4>
+    <h4 class="method-list-item-label">
+      type
+
+      <span class="method-list-item-type method-list-item-type-required">required</span>
+    </h4>
 
     <p class="method-list-item-description">Package type. Possible values are "bits", "docker".</p>
   </li>
   <li class="method-list-item">
-    <h4 class="method-list-item-label">data</h4>
+    <h4 class="method-list-item-label">
+      data
+
+      <span class="method-list-item-type">optional</span>
+    </h4>
 
     <p class="method-list-item-description">Data for docker packages. Can be empty for bits packages.</p>
   </li>
   <li class="method-list-item">
-    <h4 class="method-list-item-label">data_image</h4>
+    <h4 class="method-list-item-label">
+      data_image
+
+      <span class="method-list-item-type">optional</span>
+    </h4>
 
     <p class="method-list-item-description">Location of docker image. Required for docker packages.</p>
   </li>
   <li class="method-list-item">
-    <h4 class="method-list-item-label">data_credentials</h4>
+    <h4 class="method-list-item-label">
+      data_credentials
+
+      <span class="method-list-item-type">optional</span>
+    </h4>
 
     <p class="method-list-item-description">Credentials for private docker image, available fields are user, password, email, login server.</p>
   </li>
   <li class="method-list-item">
-    <h4 class="method-list-item-label">data_store_image</h4>
+    <h4 class="method-list-item-label">
+      data_store_image
+
+      <span class="method-list-item-type">optional</span>
+    </h4>
 
     <p class="method-list-item-description">Whether or not the backend should cache the image. Defaults to false.</p>
   </li>

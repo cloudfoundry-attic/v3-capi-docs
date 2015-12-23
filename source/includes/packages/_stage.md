@@ -117,22 +117,38 @@ This endpoint stages a package. Staging a package creates a droplet.
 
 <ul class="method-list-group">
   <li class="method-list-item">
-    <h4 class="method-list-item-label">environment_variables</h4>
+    <h4 class="method-list-item-label">
+      environment_variables
+
+      <span class="method-list-item-type">optional</span>
+    </h4>
 
     <p class="method-list-item-description">JSON object of environment variables to use during staging. Environment variable names may not start with "VCAP_" or "CF_". "PORT" is not a valid environment variable. Example environment variables: {"FEATURE_ENABLED": "true"}</p>
   </li>
   <li class="method-list-item">
-    <h4 class="method-list-item-label">memory_limit</h4>
+    <h4 class="method-list-item-label">
+      memory_limit
+
+      <span class="method-list-item-type">optional</span>
+    </h4>
 
     <p class="method-list-item-description">Memory limit used to stage package. Must be an integer.</p>
   </li>
   <li class="method-list-item">
-    <h4 class="method-list-item-label">disk_limit</h4>
+    <h4 class="method-list-item-label">
+      disk_limit
+
+      <span class="method-list-item-type">optional</span>
+    </h4>
 
     <p class="method-list-item-description">Disk limit used to stage package. Must be an integer.</p>
   </li>
   <li class="method-list-item">
-    <h4 class="method-list-item-label">lifecycle</h4>
+    <h4 class="method-list-item-label">
+      lifecycle
+
+      <span class="method-list-item-type">optional</span>
+    </h4>
 
     <p class="method-list-item-description">JSON object of lifecycle information for a droplet. If not provided, it will default to a buildpack. Example lifecycle information: { "type": "buildpack", "data": { "buildpack": "http://github.com/myorg/awesome-buildpack", "stack": "cflinuxfs2" } }</p>
   </li>

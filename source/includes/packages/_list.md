@@ -114,12 +114,20 @@ This endpoint retrieves all the packages.
 
 <ul class="method-list-group">
   <li class="method-list-item">
-    <h4 class="method-list-item-label">page</h4>
+    <h4 class="method-list-item-label">
+      page
+
+      <span class="method-list-item-type">optional</span>
+    </h4>
 
     <p class="method-list-item-description">Page to display. Possible values are all integers >= 1.</p>
   </li>
   <li class="method-list-item">
-    <h4 class="method-list-item-label">per_page</h4>
+    <h4 class="method-list-item-label">
+      per_page
+
+      <span class="method-list-item-type">optional</span>
+    </h4>
 
     <p class="method-list-item-description">Number of results per page. Possible values are 1 through 5000.</p>
   </li>

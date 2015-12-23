@@ -21,6 +21,11 @@
   .method-list-item-type {
     display: block;
     color: $color-text-dim;
+
+    &.method-list-item-type-required {
+      text-transform: uppercase;
+      color: $color-required-parameter;
+    }
   }
 }
 
