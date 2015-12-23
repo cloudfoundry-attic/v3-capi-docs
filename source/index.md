@@ -7,6 +7,7 @@ language_tabs:
 includes:
   - general/header
   - packages/header
+  - packages/object
   - packages/get
   - packages/list
   - packages/create

@@ -17,6 +17,11 @@
   font-size: $font-size-xls;
   margin-top: 0;
   line-height: 1.6;
+
+  .method-list-item-type {
+    display: block;
+    color: $color-text-dim;
+  }
 }
 
 .method-list-item-description {
