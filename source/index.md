@@ -12,6 +12,7 @@ includes:
   - packages/get
   - packages/stage
   - packages/upload_bits
+  - packages/delete
   - packages/list
 
 search: true
