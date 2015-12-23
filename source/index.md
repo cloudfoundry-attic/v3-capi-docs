@@ -8,11 +8,11 @@ includes:
   - general/header
   - packages/header
   - packages/object
-  - packages/get
-  - packages/list
   - packages/create
+  - packages/get
   - packages/stage
   - packages/upload_bits
+  - packages/list
 
 search: true
 ---
