@@ -22,14 +22,7 @@ curl "https://api.[your-domain.com]/v3/apps/[guid]]/packages" \
   -d '{ \
     "type": "docker", \
       "data": { \
-        "image": "registry/image:latest", \
-        "credentials": { \
-        "user": "user name", \
-        "password": "very secret password", \
-        "email": "root@admin.example.com", \
-        "login_server": "https://index.docker.io/v1" \
-        }, \
-        "store_image": true \
+        "image": "registry/image:latest" \
       } \
     }'
 ```
@@ -54,14 +47,7 @@ X-Content-Type-Options: nosniff
       "value": null
     },
     "error": null,
-    "image": "registry/image:latest",
-    "credentials": {
-      "user": "user name",
-      "email": "root@admin.example.com",
-      "password": "very secret password",
-      "login_server": "https://index.docker.io/v1"
-    },
-    "store_image": true
+    "image": "registry/image:latest"
   },
   "state": "READY",
   "created_at": "2015-11-03T00:53:54Z",
@@ -103,29 +89,11 @@ This endpoint creates a new package.
   </li>
   <li class="method-list-item">
     <h4 class="method-list-item-label">
-      data_image
+      data['image']
 
       <span class="method-list-item-type">optional</span>
     </h4>
 
     <p class="method-list-item-description">Location of docker image. Required for docker packages.</p>
-  </li>
-  <li class="method-list-item">
-    <h4 class="method-list-item-label">
-      data_credentials
-
-      <span class="method-list-item-type">optional</span>
-    </h4>
-
-    <p class="method-list-item-description">Credentials for private docker image, available fields are user, password, email, login server.</p>
-  </li>
-  <li class="method-list-item">
-    <h4 class="method-list-item-label">
-      data_store_image
-
-      <span class="method-list-item-type">optional</span>
-    </h4>
-
-    <p class="method-list-item-description">Whether or not the backend should cache the image. Defaults to false.</p>
   </li>
 </ul>
