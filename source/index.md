@@ -14,6 +14,11 @@ includes:
   - packages/upload_bits
   - packages/delete
   - packages/list
+  - service_bindings/header
+  - service_bindings/object
+  - service_bindings/create
+  - service_bindings/get
+  - service_bindings/list
 
 search: true
 ---
