@@ -13,18 +13,18 @@ Example Request
 ```
 
 ```shell
-curl "https://api.[your-domain.com]/v3/apps/[guid]]/packages" \
-  -X POST \
- 	-H "Authorization: bearer [token]" \
- 	-H "Host: [host.com]" \
- 	-H "Content-Type: application/x-www-form-urlencoded" \
- 	-H "Cookie: " \
-  -d '{ \
-    "type": "docker", \
-      "data": { \
-        "image": "registry/image:latest" \
-      } \
-    }'
+curl "https://api.[your-domain.com]/v3/apps/[guid]]/packages"
+  -X POST
+  -H "Authorization: bearer [token]"
+  -H "Host: [host.com]"
+  -H "Content-Type: application/x-www-form-urlencoded"
+  -H "Cookie: "
+  -d '{
+    "type": "docker",
+    "data": {
+      "image": "registry/image:latest"
+    }
+  }'
 ```
 
 ```

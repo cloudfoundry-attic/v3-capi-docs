@@ -13,24 +13,24 @@ Example Request
 ```
 
 ```shell
-curl "https://api.[your-domain.com]/v3/packages/[guid]/droplets" \
-  -X POST \
- 	-H "Authorization: bearer [token]" \
- 	-H "Host: [host.com]" \
- 	-H "Content-Type: application/x-www-form-urlencoded" \
- 	-H "Cookie: " \
-  -d '{ \
-      "environment_variables": { \
-          "CUSTOM_ENV_VAR": "hello" \
-      }, \
-      "lifecycle": { \
-        "type": "buildpack", \
-        "data": { \
-          "buildpack": "http://github.com/myorg/awesome-buildpack", \
-          "stack": "cflinuxfs2" \
-        } \
-      } \
-    }'
+curl "https://api.[your-domain.com]/v3/packages/[guid]/droplets"
+  -X POST
+  -H "Authorization: bearer [token]"
+  -H "Host: [host.com]"
+  -H "Content-Type: application/x-www-form-urlencoded"
+  -H "Cookie: "
+  -d '{
+    "environment_variables": {
+      "CUSTOM_ENV_VAR": "hello"
+    },
+    "lifecycle": {
+      "type": "buildpack",
+      "data": {
+        "buildpack": "http://github.com/myorg/awesome-buildpack",
+        "stack": "cflinuxfs2"
+      }
+    }
+  }'
 ```
 
 ```
