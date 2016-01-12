@@ -88,9 +88,7 @@ X-Content-Type-Options: nosniff
           "value": null
         },
         "error": null,
-        "image": "http://location-of-image.com",
-        "credentials": { },
-        "store_image": false
+        "image": "http://location-of-image.com"
       },
       "state": "READY",
       "created_at": "2015-11-03T00:53:54Z",
