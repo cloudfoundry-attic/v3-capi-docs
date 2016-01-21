@@ -19,6 +19,10 @@ includes:
   - service_bindings/create
   - service_bindings/get
   - service_bindings/list
+  - tasks/header
+  - tasks/object
+  - tasks/create
+  - tasks/get
 
 search: true
 ---
