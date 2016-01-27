@@ -49,7 +49,8 @@ Content-Type: application/json; charset=utf-8
 }
 ```
 
-This endpoint retrieves a specific task.
+This endpoint retrieves a specific task. A task can have states `RUNNING`, `SUCCEEDED`, and `FAILED`.
+When a task's state is `FAILED`, the failure reason will be in the `result.message` field.
 
 ### Body Parameters
 
