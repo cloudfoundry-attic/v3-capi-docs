@@ -23,6 +23,7 @@ includes:
   - tasks/object
   - tasks/create
   - tasks/get
+  - tasks/list
 
 search: true
 ---
