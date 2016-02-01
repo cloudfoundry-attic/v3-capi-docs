@@ -6,6 +6,8 @@ language_tabs:
 
 includes:
   - general/header
+  - apps/header
+  - apps/tasks/get
   - packages/header
   - packages/object
   - packages/create
