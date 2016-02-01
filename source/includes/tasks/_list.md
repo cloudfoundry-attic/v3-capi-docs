@@ -47,6 +47,7 @@ Content-Type: application/json; charset=utf-8
          "name": "task-1",
          "command": "rake db:migrate && true",
          "state": "RUNNING",
+         "memory_in_mb": 1024,
          "result": {
             "message": null
          },
@@ -68,6 +69,7 @@ Content-Type: application/json; charset=utf-8
          "name": "task-2",
          "command": "rake db:migrate && true",
          "state": "RUNNING",
+         "memory_in_mb": 1024,
          "result": {
             "message": null
          },

@@ -29,6 +29,14 @@
   </li>
   <li class="method-list-item">
     <h4 class="method-list-item-label">
+      memory_in_mb
+      <span class="method-list-item-type">integer</span>
+    </h4>
+
+    <p class="method-list-item-description">Maximum memory for the task in MB.</p>
+  </li>
+  <li class="method-list-item">
+    <h4 class="method-list-item-label">
       state
       <span class="method-list-item-type">string</span>
     </h4>

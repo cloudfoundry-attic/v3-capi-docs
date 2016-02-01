@@ -22,6 +22,7 @@ curl "https://api.[your-domain.com]/v3/apps/[guid]/tasks"
   -d '{
     "name": "my-task",
     "command": "echo 'hello world'",
+    "memory_in_mb": 512,
   }'
 ```
 
@@ -38,6 +39,7 @@ Content-Type: application/json;charset=utf-8
    "name": "my-task",
    "command": "echo 'hello world'",
    "state": "RUNNING",
+   "memory_in_mb": 512,
    "result": {
       "message": null
    },
@@ -78,5 +80,13 @@ This endpoint creates a new task.
     </h4>
 
     <p class="method-list-item-description">Command that will be executed</p>
+  </li>
+  <li class="method-list-item">
+    <h4 class="method-list-item-label">
+      memory_in_mb
+      <span class="method-list-item-type">optional</span>
+    </h4>
+
+    <p class="method-list-item-description">Maximum memory for the task in MB. Will default to operater-configurable 'default_app_memory' if not set.</p>
   </li>
 </ul>

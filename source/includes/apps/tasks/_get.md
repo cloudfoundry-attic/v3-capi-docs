@@ -32,6 +32,7 @@ Content-Type: application/json; charset=utf-8
   "name": "task",
   "command": "echo foo",
   "state": "RUNNING",
+  "memory_in_mb": 1024,
   "result": {
     "message": null
   },
