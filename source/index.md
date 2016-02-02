@@ -9,6 +9,7 @@ includes:
   - general/header
   - apps/header
   - apps/tasks/get
+  - apps/tasks/list
   - packages/header
   - packages/object
   - packages/create
