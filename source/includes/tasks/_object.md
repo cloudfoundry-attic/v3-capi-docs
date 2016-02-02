@@ -41,7 +41,7 @@
       <span class="method-list-item-type">string</span>
     </h4>
 
-    <p class="method-list-item-description">State of the task. Possible states are "RUNNING"</p>
+    <p class="method-list-item-description">State of the task. Possible states are "RUNNING", "SUCCEEDED", and "FAILED"</p>
   </li>
   <li class="method-list-item">
       <h4 class="method-list-item-label">
@@ -53,11 +53,11 @@
   </li>
   <li class="method-list-item">
       <h4 class="method-list-item-label">
-        result[message]
+        result[failure_reason]
         <span class="method-list-item-type">string</span>
       </h4>
 
-      <p class="method-list-item-description">Always null</p>
+      <p class="method-list-item-description">Null if the task succeeds, contains the error message if it fails.</p>
   </li>
   <li class="method-list-item">
     <h4 class="method-list-item-label">
