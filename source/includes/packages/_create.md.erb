@@ -13,12 +13,9 @@ Example Request
 ```
 
 ```shell
-curl "https://api.[your-domain.com]/v3/apps/[guid]/packages"
-  -X POST
-  -H "Authorization: bearer [token]"
-  -H "Host: [host.com]"
-  -H "Content-Type: application/x-www-form-urlencoded"
-  -H "Cookie: "
+curl "https://api.[your-domain.com]/v3/apps/[guid]/packages" \
+  -X POST \
+  -H "Authorization: bearer [token]" \
   -d '{
     "type": "docker",
     "data": {
