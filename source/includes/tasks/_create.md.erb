@@ -34,28 +34,7 @@ Example Response
 HTTP/1.1 202 Accepted
 Content-Type: application/json;charset=utf-8
 
-{
-   "guid": "029f82e8-9f16-4b7e-a1c3-1c80fb1174d3",
-   "name": "my-task",
-   "command": "echo 'hello world'",
-   "state": "RUNNING",
-   "memory_in_mb": 512,
-   "result": {
-      "message": null
-   },
-   "links": {
-      "self": {
-         "href": "/v3/tasks/029f82e8-9f16-4b7e-a1c3-1c80fb1174d3"
-      },
-      "app": {
-         "href": "/v3/apps/ae32849e-6f2d-4db9-8771-ac1883a70b9b"
-      },
-      "droplet": {
-         "href": "/v3/droplets/35deb1cc-8c5a-4791-8ef5-01b214030b48"
-      }
-   }
-}
-
+<%= yield_content :single_task %>
 ```
 
 This endpoint creates a new task.

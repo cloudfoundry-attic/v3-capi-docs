@@ -5,6 +5,7 @@ language_tabs:
   - shell: curl
 
 includes:
+  - api_resources/tasks
   - general/header
   - apps/header
   - apps/tasks/get
