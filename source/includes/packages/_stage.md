@@ -36,10 +36,6 @@ Example Response
 
 ```http
 HTTP/1.1 201 Created
-Content-Type: application/json;charset=utf-8
-X-VCAP-Request-ID: whatuuid
-Content-Length: 1575
-X-Content-Type-Options: nosniff
 
 {
   "guid": "whatuuid",

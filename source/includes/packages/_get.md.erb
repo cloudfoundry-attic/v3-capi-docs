@@ -24,12 +24,6 @@ Example Response
 
 ```http
 HTTP/1.1 200 OK
-X-Frame-Options: SAMEORIGIN
-X-XSS-Protection: 1; mode=block
-X-Content-Type-Options: nosniff
-Content-Type: application/json; charset=utf-8
-X-Runtime: 0.014007
-Content-Length: 840
 
 <%= yield_content :single_bits_package %>
 ```

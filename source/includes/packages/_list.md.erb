@@ -24,10 +24,6 @@ Example Response
 
 ```http
 HTTP/1.1 200 OK
-Content-Type: application/json;charset=utf-8
-X-VCAP-Request-ID: ab2917b8-b842-4425-aa8f-7c3ff33d9680
-Content-Length: 1933
-X-Content-Type-Options: nosniff
 
 <%= yield_content :paginated_list_of_packages, '/v3/packages' %>
 ```

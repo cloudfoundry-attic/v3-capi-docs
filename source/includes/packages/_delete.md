@@ -24,10 +24,6 @@ Example Response
 
 ```http
 HTTP/1.1 204 No Content
-X-Frame-Options: SAMEORIGIN
-X-XSS-Protection: 1; mode=block
-X-Content-Type-Options: nosniff
-X-Runtime: 0.014007
 ```
 
 This endpoint deletes a specific package.
