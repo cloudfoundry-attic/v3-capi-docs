@@ -7,6 +7,7 @@ language_tabs:
 includes:
   - api_resources/tasks
   - api_resources/packages
+  - api_resources/service_bindings
   - general/header
   - apps/header
   - apps/tasks/get
