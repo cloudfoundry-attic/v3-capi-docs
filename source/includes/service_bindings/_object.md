@@ -1,6 +1,6 @@
 <div class='no-margin'></div>
 
-## The service binding object
+## The service_binding object
 
 <ul class="method-list-group">
   <li class="method-list-item">

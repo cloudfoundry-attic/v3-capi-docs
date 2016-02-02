@@ -1,4 +1,4 @@
-## List all service_bindings
+## List Service Bindings
 
 ```
 Definition
@@ -95,7 +95,7 @@ X-Content-Type-Options: nosniff
 }
 ```
 
-This endpoint retrieves all the service bindings for the spaces in which you are a Space Developer.
+This endpoint retrieves the service bindings the user has access to.
 
 ### Body Parameters
 

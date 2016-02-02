@@ -1,4 +1,4 @@
-## List all Packages
+## List Packages
 
 ```
 Definition
@@ -106,7 +106,7 @@ X-Content-Type-Options: nosniff
 }
 ```
 
-This endpoint retrieves all the packages.
+This endpoint retrieves the packages the user has access to.
 
 ### Body Parameters
 
