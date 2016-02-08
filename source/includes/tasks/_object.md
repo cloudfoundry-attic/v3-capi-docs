@@ -50,7 +50,7 @@
       <span class="method-list-item-type">string</span>
     </h4>
 
-    <p class="method-list-item-description">State of the task. Possible states are "RUNNING", "SUCCEEDED", and "FAILED"</p>
+    <p class="method-list-item-description">State of the task. Possible states are PENDING, RUNNING, SUCCEEDED, and FAILED</p>
   </li>
   <li class="method-list-item">
       <h4 class="method-list-item-label">

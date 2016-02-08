@@ -28,7 +28,7 @@ HTTP/1.1 200 OK
 <%= yield_content :single_task %>
 ```
 
-This endpoint retrieves a specific task. A task can have states `RUNNING`, `SUCCEEDED`, and `FAILED`.
+This endpoint retrieves a specific task. A task can have states `PENDING`, `RUNNING`, `SUCCEEDED`, and `FAILED`.
 When a task's state is `FAILED`, the failure reason will be in the `result.failure_message` field.
 
 ### Body Parameters
