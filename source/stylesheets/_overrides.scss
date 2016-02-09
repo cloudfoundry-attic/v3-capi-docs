@@ -2,6 +2,11 @@ html, body {
   //change to proxima nova body font
 }
 
+.caret {
+  position: absolute;
+  left: 89%;
+}
+
 .btn {
   display: inline-block;
 
@@ -65,14 +70,25 @@ html, body {
   box-shadow: 0 2px 0 rgba(211, 217, 217, 0.5);
 }
 
-.dropdown-filter input {
-  border:none;
-  outline: none;
-  border-width: 0 0 1px 0;
-  border-color: transparent;
-  padding: 0px 0 0px 20px;
-  width:calc(100% - 20px);
-  color: #2185c5;
+.dropdown-filter {
+
+  input {
+    border: none;
+    outline: none;
+    border-width: 0 0 1px 0;
+    border-color: transparent;
+    padding: 0px 0 0px 25px;
+    width: calc(100% - 25px);
+    color: #2185c5;
+  }
+
+  &:before {
+    position: absolute;
+    top: 17px;
+    left: $nav-padding;
+    color: $nav-text;
+    @extend %icon-search;
+  }
 }
 
 .dropdown-filter .dropdown-row {
