@@ -30,6 +30,7 @@ includes:
   - tasks/create
   - tasks/get
   - tasks/list
+  - tasks/cancel
 
 search: true
 ---
