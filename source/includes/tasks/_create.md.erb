@@ -17,8 +17,8 @@ curl "https://api.[your-domain.com]/v3/apps/[guid]/tasks" \
   -X POST \
   -H "Authorization: bearer [token]" \
   -d '{
-    "name": "my-task",
-    "command": "echo 'hello world'",
+    "name": "migrate",
+    "command": "rake db:migrate",
     "memory_in_mb": 512,
   }'
 ```
