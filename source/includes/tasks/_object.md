@@ -82,7 +82,7 @@
       <span class="method-list-item-type">datetime</span>
     </h4>
 
-    <p class="method-list-item-description">The time with zone with the task was last updated.</p>
+    <p class="method-list-item-description">The time with zone when the task was last updated.</p>
   </li>
   <li class="method-list-item">
     <h4 class="method-list-item-label">
