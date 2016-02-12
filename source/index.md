@@ -24,6 +24,7 @@ includes:
   - service_bindings/object
   - service_bindings/create
   - service_bindings/get
+  - service_bindings/delete
   - service_bindings/list
   - tasks/header
   - tasks/object
