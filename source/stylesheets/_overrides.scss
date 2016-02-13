@@ -49,6 +49,8 @@ html, body {
   position:relative;
 }
 
+#version-select { }
+
 .dropdown-toggle {
   width:100%;
   text-align:left;
@@ -68,9 +70,6 @@ html, body {
   border: 1px solid #d4d9d9;
   border-radius: 4px;
   box-shadow: 0 2px 0 rgba(211, 217, 217, 0.5);
-}
-
-.dropdown-filter {
 
   input {
     border: none;
@@ -103,7 +102,7 @@ html, body {
   }
 }
 
-.dropdown-filter .scroll-ul {
+.dropdown-filter .dropdown-content {
   overflow-x:hidden;
   overflow-y:auto;
   max-height: 168px;
