@@ -112,6 +112,12 @@ html, body {
   }
 }
 
+.dropdown-filter .dropdown-content a {
+  color: #2185c5;
+  padding: 2px 10px;
+  display: block;
+}
+
 .dropdown.open > .dropdown-menu {
   display: block;
 }

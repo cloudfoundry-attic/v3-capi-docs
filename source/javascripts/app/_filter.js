@@ -56,7 +56,7 @@
   function displaySearchResults(results) {
     $.each(results, function (index, result) {
       var matchingLink = findMatchingLinkFromOriginal(result.ref);
-      searchResults.append('<li>' + $(matchingLink).html() + '</li>');
+      searchResults.append(matchingLink);
     });
   }
 
