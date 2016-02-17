@@ -1,4 +1,4 @@
-## Stage a Package
+## Stage a package
 
 ```
 Definition

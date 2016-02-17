@@ -1,4 +1,4 @@
-## Delete a Package
+## Delete a package
 
 ```
 Definition

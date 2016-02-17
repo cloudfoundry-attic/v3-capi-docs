@@ -1,4 +1,4 @@
-## Delete a Service Binding
+## Delete a service binding
 
 ```
 Definition

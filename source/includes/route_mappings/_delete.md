@@ -1,4 +1,4 @@
-## Delete a Route Mapping
+## Delete a route mapping
 
 ```
 Definition
