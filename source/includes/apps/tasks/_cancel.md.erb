@@ -5,7 +5,7 @@ Definition
 ```
 
 ```http
-PUT /v3/tasks/:task_guid/cancel HTTP/1.1
+PUT /v3/apps/:guid/tasks/:guid/cancel HTTP/1.1
 ```
 
 ```
@@ -13,7 +13,7 @@ Example Request
 ```
 
 ```shell
-curl "https://api.[your-domain.com]/v3/tasks/[guid]/cancel" \
+curl "https://api.[your-domain.com]/v3/apps/[guid]/tasks/[guid]/cancel" \
   -X PUT \
   -H "Authorization: bearer [token]" \
   -d '{}'

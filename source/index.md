@@ -13,6 +13,7 @@ includes:
   - apps/header
   - apps/tasks/get
   - apps/tasks/list
+  - apps/tasks/cancel
   - packages/header
   - packages/object
   - packages/create
