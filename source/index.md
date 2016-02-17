@@ -7,6 +7,7 @@ language_tabs:
 includes:
   - api_resources/tasks
   - api_resources/packages
+  - api_resources/route_mappings
   - api_resources/service_bindings
   - general/header
   - apps/header
@@ -20,6 +21,12 @@ includes:
   - packages/upload_bits
   - packages/delete
   - packages/list
+  - route_mappings/header
+  - route_mappings/object
+  - route_mappings/create
+  - route_mappings/get
+  - route_mappings/delete
+  - route_mappings/list
   - service_bindings/header
   - service_bindings/object
   - service_bindings/create
