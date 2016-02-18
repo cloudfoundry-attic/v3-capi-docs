@@ -43,24 +43,13 @@ under the License.
 
     <script>
       $(document).ready(function() {
-        // TODO: Add access credential logic here.
+        var versionNumbers = [
+          240,
+        ]
 
-        s3 = new AWS.S3();
-        var params = {
-          Bucket: 'cloudcontroller-api-docs'
-        };
-
-        s3.listObjects(params, function (err, data) {
-          if(err)throw err;
-          keys = data.Contents.map(function(object) {
-            return object.Key.split("/")[0];
-          });
-          keys = jQuery.unique(keys);
-
-          for (i = 0; i < keys.length; i++) {
-            $('.dropdown-list').append('<li><a href="#">' + keys[i] + '</a></li>');
-          }
-        });
+        for (i = 0; i < versionNumbers.length; i++) {
+          $('.dropdown-list').append('<li><a href="https://s3.amazonaws.com/cloudcontroller-api-docs/' + versionNumbers[i] + '/index.html">' + versionNumbers[i] + '</a></li>');
+        }
       });
     </script>
   </head>
