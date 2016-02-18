@@ -8,7 +8,7 @@ fi
 
 middleman build
 
-aws s3 sync build s3://cloudcontroller-api-docs/$1 --profile new-docs --acl public-read
+aws s3 sync build s3://cloudcontroller-api-docs/$1 --acl public-read
 
-aws s3 rm s3://cloudcontroller-api-docs/release-candidate/ --recursive --profile new-docs
-aws s3 cp s3://cloudcontroller-api-docs/$1/ s3://cloudcontroller-api-docs/release-candidate/ --recursive --profile new-docs
+aws s3 rm s3://cloudcontroller-api-docs/release-candidate/ --recursive
+aws s3 cp s3://cloudcontroller-api-docs/$1/ s3://cloudcontroller-api-docs/release-candidate/ --recursive
