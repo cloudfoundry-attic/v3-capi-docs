@@ -42,14 +42,8 @@ under the License.
     <% end %>
 
     <script>
-      $(document).ready(function() {
-        var versionNumbers = [
-          240,
-        ]
-
-        for (i = 0; i < versionNumbers.length; i++) {
-          $('.dropdown-list').append('<li><a href="https://s3.amazonaws.com/cloudcontroller-api-docs/' + versionNumbers[i] + '/index.html">' + versionNumbers[i] + '</a></li>');
-        }
+      $(function() {
+        setupVersionsDropdown();
       });
     </script>
   </head>
@@ -92,7 +86,6 @@ under the License.
                 <a id="release-candidate">Release Candidate</a>
               </div>
             </div>
-
           </ul>
         </div>
       </div>
