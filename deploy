@@ -6,7 +6,11 @@ if [[ $# -eq 0 ]] ; then
   exit 0
 fi
 
+echo $1 > source/version
+
 middleman build
+
+rm source/version
 
 aws s3 sync build s3://cloudcontroller-api-docs/$1 --acl public-read
 

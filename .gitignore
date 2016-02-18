@@ -16,6 +16,7 @@ build/
 .cache
 node_modules
 node_modules/**/*
+source/version
 
 # YARD artifacts
 .yardoc
