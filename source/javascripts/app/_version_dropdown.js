@@ -1,7 +1,10 @@
 //= require ../lib/_lunr
 
-(function () {
+
+(function() {
   'use strict';
+
+  $(setupVersionsDropdown);
 
   var originalSearchResults, originalDropdownLinks;
   var searchResults, dropdownLinks;
@@ -9,14 +12,9 @@
   var index = new lunr.Index();
 
   index.ref('id');
-  index.field('title', { boost: 10 });
+  index.field('title', {boost: 10});
   index.field('body');
   index.pipeline.add(lunr.trimmer, lunr.stopWordFilter);
-
-  $(captureOriginal);
-  $(bindDropdownPointers);
-  $(populateFilter);
-  $(bindFilter);
 
   function captureOriginal() {
     originalSearchResults = $('.dropdown-content .dropdown-list').clone();
@@ -82,4 +80,18 @@
     }
   }
 
+  function setupVersionsDropdown() {
+    $.get(
+      "/version_dropdown.html",
+      function(data) {
+        $('#version-dropdown-menu').html(data);
+
+        captureOriginal();
+        bindDropdownPointers();
+        populateFilter();
+        bindFilter();
+      }
+    );
+  }
 })();
+

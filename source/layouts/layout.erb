@@ -49,12 +49,6 @@ under the License.
         });
       </script>
     <% end %>
-
-    <script>
-      $(function() {
-        setupVersionsDropdown();
-      });
-    </script>
   </head>
 
   <body class="<%= page_classes %>">
@@ -81,20 +75,7 @@ under the License.
       <div id="version-dropdown">
         <div class="dropdown">
           <button type="button" id="version-dropdown-button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Version <%= get_version %><span class="caret">&#x25BE;</span></button>
-          <ul class="dropdown-menu" role="menu" aria-labelledby="version-dropdown-button">
-            <div class="dropdown-filter">
-              <div class="dropdown-row">
-                <input id="version-select" type="text" placeholder="Filter">
-              </div>
-              <div class="dropdown-content">
-                <ul class="dropdown-list">
-
-                </ul>
-              </div>
-              <div class="dropdown-row">
-                <a id="release-candidate">Release Candidate</a>
-              </div>
-            </div>
+          <ul id="version-dropdown-menu" class="dropdown-menu" role="menu" aria-labelledby="version-dropdown-button">
           </ul>
         </div>
       </div>

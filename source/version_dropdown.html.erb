@@ -1,0 +1,23 @@
+---
+layout: "empty"
+versions: []
+---
+
+<div class="dropdown-filter">
+  <div class="dropdown-row">
+    <input id="version-select" type="text" placeholder="Filter">
+  </div>
+  <div class="dropdown-content">
+    <ul class="dropdown-list">
+      <% current_page.data.versions.each do |version| %>
+        <li><a id="version-link-<%= version %>" class="version-link" href="/<%= version %>"><%= version %></a></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="dropdown-row">
+    <a id="latest-release" href="/">Latest</a>
+  </div>
+  <div class="dropdown-row">
+    <a id="release-candidate" href="/release-candidate">Release Candidate</a>
+  </div>
+</div>
