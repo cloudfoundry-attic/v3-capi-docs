@@ -36,3 +36,9 @@ configure :build do
   # activate :asset_hash
   # activate :gzip
 end
+
+helpers do
+  def versions
+    @versions ||= Dir.entries('gh-pages/version') - ['.', '..', 'release-candidate']
+  end
+end
