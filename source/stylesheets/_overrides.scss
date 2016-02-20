@@ -90,9 +90,19 @@ html, body {
   }
 }
 
-.dropdown-filter .dropdown-row {
+.dropdown-filter .dropdown-search-bar {
   padding:10px;
 
+  &:first-child {
+    border-bottom:1px solid #d4d9d9;
+  }
+
+  &:last-child {
+    border-top:1px solid #d4d9d9;
+  }
+}
+
+.dropdown-filter .dropdown-footer {
   &:first-child {
     border-bottom:1px solid #d4d9d9;
   }
