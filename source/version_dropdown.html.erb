@@ -4,7 +4,7 @@ versions: []
 ---
 
 <div class="dropdown-filter">
-  <div class="dropdown-row">
+  <div class="dropdown-search-bar">
     <input id="version-select" type="text" placeholder="Filter">
   </div>
   <div class="dropdown-content">
@@ -14,10 +14,10 @@ versions: []
       <% end %>
     </ul>
   </div>
-  <div class="dropdown-row">
-    <a id="latest-release" href="/">Latest</a>
-  </div>
-  <div class="dropdown-row">
-    <a id="release-candidate" href="/release-candidate">Release Candidate</a>
+  <div class="dropdown-footer dropdown-content">
+    <ul class="dropdown-list">
+      <li><a id="release-candidate" href="/version/release-candidate">Release Candidate</a></li>
+      <li><a id="latest-release" href="/">Latest</a></li>
+    </ul>
   </div>
 </div>
