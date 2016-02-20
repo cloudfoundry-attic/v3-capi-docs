@@ -1,16 +1,9 @@
----
-layout: "empty"
----
-
 <div class="dropdown-filter">
   <div class="dropdown-search-bar">
     <input id="version-select" type="text" placeholder="Filter">
   </div>
   <div class="dropdown-content">
     <ul class="dropdown-list">
-      <% versions.sort.reverse.each do |version| %>
-        <li><a id="version-link-<%= version %>" class="version-link" href="/version/<%= version %>"><%= version %></a></li>
-      <% end %>
     </ul>
   </div>
   <div class="dropdown-footer dropdown-content">
@@ -20,3 +13,4 @@ layout: "empty"
     </ul>
   </div>
 </div>
+

@@ -1,18 +1,30 @@
 #!/bin/bash
 set -e -x
 
-if [[ $# -eq 0 ]] ; then
+SCRIPT_DIR=$(dirname $0)
+VERSION_DIR="$SCRIPT_DIR/gh-pages/version/$1"
+BUILD_DIR="$SCRIPT_DIR/build"
+VERSION_FILE="$SCRIPT_DIR/source/versionfile"
+
+if [[ $# -eq 0 ]]; then
   echo "You need to provide the version number as the first argument"
   exit 0
 fi
 
-echo $1 > source/version
+if [[ -d $VERSION_DIR ]]; then
+  echo "That version already exists."
+  exit 1
+fi
 
-middleman build
+echo $1 > $VERSION_FILE
 
-rm source/version
+bundle exec middleman build
 
-aws s3 sync build s3://cloudcontroller-api-docs/$1 --acl public-read
+rm $VERSION_FILE
 
-aws s3 rm s3://cloudcontroller-api-docs/release-candidate/ --recursive
-aws s3 cp s3://cloudcontroller-api-docs/$1/ s3://cloudcontroller-api-docs/release-candidate/ --recursive
+ls $SCRIPT_DIR/gh-pages | grep -v version | xargs rm -rf
+
+mkdir -p $VERSION_DIR
+
+cp -R $BUILD_DIR/ $SCRIPT_DIR/gh-pages/
+cp -R $BUILD_DIR/ $VERSION_DIR/
