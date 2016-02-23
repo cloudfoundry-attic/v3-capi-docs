@@ -82,7 +82,7 @@
 
   function setupVersionsDropdown() {
     $.get(
-      "/version_dropdown.html",
+      "version_dropdown.html",
       function(data) {
         $('#version-dropdown-menu').html(data);
 
