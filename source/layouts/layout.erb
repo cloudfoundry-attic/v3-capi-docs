@@ -16,10 +16,11 @@ under the License.
 <% language_tabs = current_page.data.language_tabs %>
 <%
   def get_version
-    if File.exists?('source/versionfile')
-      File.read('source/versionfile')
+    version = File.exists?('source/versionfile') ? File.read('source/versionfile') : 'local'
+    if version =~ /release-candidate/
+      "Release Candidate"
     else
-      'local'
+      "Version #{version}"
     end
   end
 %>
@@ -74,7 +75,7 @@ under the License.
 
       <div id="version-dropdown">
         <div class="dropdown">
-          <button type="button" id="version-dropdown-button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Version <%= get_version %><span class="caret">&#x25BE;</span></button>
+          <button type="button" id="version-dropdown-button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= get_version %><span class="caret">&#x25BE;</span></button>
           <ul id="version-dropdown-menu" class="dropdown-menu" role="menu" aria-labelledby="version-dropdown-button">
             <div class="dropdown-filter">
               <div class="dropdown-search-bar">
