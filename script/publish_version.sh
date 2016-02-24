@@ -22,7 +22,7 @@ bundle exec middleman build
 
 #  - Delete the versionfile
 
-rm $ROOT_DIR/source/versionfile
+rm -f $ROOT_DIR/source/versionfile
 
 
 #  - Check out to gh-pages
@@ -45,7 +45,7 @@ mv build/* version/$VERSION
 
 # - rewrite the index.html
 if [[ $VERSION != 'release-candidate' ]]; then
-  rm index.html
+  rm -f index.html
   touch index.html
   echo "---
   redirect_to: version/$VERSION/index.html
@@ -58,7 +58,7 @@ fi
 
 DIRS=`ls -l version | egrep '^d' | awk '{print $9}'`
 
-rm versions.json
+rm -f versions.json
 touch versions.json
 
 echo -e '{
