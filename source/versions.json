@@ -1,0 +1,8 @@
+{
+  "versions": [
+    "fake-version-1",
+    "fake-version-2",
+    "fake-version-3",
+    "release-candidate"
+  ]
+}
