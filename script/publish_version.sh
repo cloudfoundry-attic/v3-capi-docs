@@ -36,6 +36,10 @@ if [[ $VERSION != 'release-candidate' && -d version/$VERSION ]]; then
   exit 1
 fi
 
+if [[ $VERSION == 'release-candidate' ]]; then
+  rm -rf version/$VERSION
+fi
+
 mkdir -p version/$VERSION
 mv build/* version/$VERSION
 
