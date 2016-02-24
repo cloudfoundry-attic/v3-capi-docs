@@ -29,13 +29,6 @@ rm $ROOT_DIR/source/versionfile
 
 git checkout gh-pages
 
-# - rewrite the index.html
-rm index.html
-touch index.html
-echo "---
-redirect_to: version/$VERSION/index.html
----" > index.html
-
 #  - copy the build directory into versions/$1/..
 
 if [[ $VERSION != 'release-candidate' && -d version/$VERSION ]]; then
@@ -46,6 +39,15 @@ fi
 mkdir -p version/$VERSION
 mv build/* version/$VERSION
 
+# - rewrite the index.html
+if [[ $VERSION != 'release-candidate' ]]; then
+  rm index.html
+  touch index.html
+  echo "---
+  redirect_to: version/$VERSION/index.html
+  ---" > index.html
+fi
+
 #  - Update the versions.json
   # - Grabs all the folder names
   # - Rewrites the versions.json
@@ -54,7 +56,6 @@ DIRS=`ls -l version | egrep '^d' | awk '{print $9}'`
 
 rm versions.json
 touch versions.json
-
 
 echo -e '{
 \t"versions": [' > versions.json
