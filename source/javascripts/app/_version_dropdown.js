@@ -4,8 +4,6 @@
 (function() {
   'use strict';
 
-  $(setupVersionsDropdown);
-
   var originalSearchResults, originalDropdownLinks;
   var searchResults, dropdownLinks;
 
@@ -16,8 +14,10 @@
   index.field('body');
   index.pipeline.add(lunr.trimmer, lunr.stopWordFilter);
 
+  $(setupVersionsDropdown);
+
   function captureOriginal() {
-    originalSearchResults = $('.dropdown-content .dropdown-list').clone();
+    originalSearchResults = $('#version-list').clone();
     originalDropdownLinks = originalSearchResults.find('.version-link').clone();
   }
 
@@ -30,20 +30,8 @@
   }
 
   function bindFilter() {
-    searchResults = $('.dropdown-content .dropdown-list');
+    searchResults = $('#version-list');
     $('#version-select').on('keyup', filterDropdown);
-  }
-
-  function populateFilter() {
-    dropdownLinks.each(function() {
-      var link = $(this);
-
-      index.add({
-        id: link.prop('id'),
-        title: link.text(),
-        href: link.href
-      });
-    });
   }
 
   function findMatchingLinkFromOriginal(id) {
@@ -55,6 +43,18 @@
     $.each(results, function (index, result) {
       var matchingLink = findMatchingLinkFromOriginal(result.ref);
       searchResults.append(matchingLink);
+    });
+  }
+
+  function populateFilter() {
+    dropdownLinks.each(function() {
+      var link = $(this);
+
+      index.add({
+        id: link.prop('id'),
+        title: link.text(),
+        href: link.href
+      });
     });
   }
 
@@ -75,7 +75,6 @@
     } else {
       searchResults.empty();
       restoreOriginalContent();
-      searchResults = $('.dropdown-content .dropdown-list');
       populateFilter();
     }
   }
