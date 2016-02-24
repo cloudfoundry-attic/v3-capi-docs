@@ -78,5 +78,5 @@ git add version/$VERSION
 git commit -m "Bump v3 API docs version $VERSION"
 # git push origin gh-pages
 
-# Check out master
-# git checkout master
+# Check master back out
+git checkout master
