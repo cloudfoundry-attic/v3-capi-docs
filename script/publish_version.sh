@@ -65,10 +65,13 @@ touch versions.json
 echo -e '{
 \t"versions": [' > versions.json
 
+version_list=''
 for DIR in $DIRS
 do
-  echo -e "\t\t\"$DIR\"," >> versions.json
+  version_list="$version_list\t\t\"$DIR\",\n"
 done
+# this crazy bash removes the trailing newline and , so that our array is valid json, there's probably a better way
+echo -e "${version_list%???}" >> versions.json
 
 echo -e '\t]
 }' >> versions.json
