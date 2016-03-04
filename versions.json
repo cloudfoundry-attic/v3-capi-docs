@@ -1,6 +1,7 @@
 {
 	"versions": [
 		"1",
+		"2",
 		"release-candidate",
 	]
 }
