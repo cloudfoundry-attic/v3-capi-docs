@@ -46,9 +46,11 @@ mv build/* version/$VERSION
 if [[ $VERSION != 'release-candidate' ]]; then
   rm -f index.html
   touch index.html
-  echo "---
-  redirect_to: version/$VERSION/index.html
-  ---" > index.html
+  cat <<INDEX > index.html
+---
+redirect_to: version/$VERSION/index.html
+---
+INDEX
 fi
 
 # Update the versions.json
