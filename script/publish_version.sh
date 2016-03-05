@@ -57,7 +57,7 @@ fi
   # - Grabs all the folder names
   # - Rewrites the versions.json
 
-DIRS=`ls -l version | egrep '^d' | awk '{print $9}'`
+DIRS=`ls -l version | egrep '^d' | awk '{print $9}' | sort -n -r`
 
 rm -f versions.json
 touch versions.json
