@@ -31,11 +31,11 @@ HTTP/1.1 202 Accepted
 
 This endpoint cancels a running task.
 
-Cancelled tasks will initially be in state "CANCELING" and will move to state "FAILED" once the cancel request has been processed by Diego.
+Canceled tasks will initially be in state "CANCELING" and will move to state "FAILED" once the cancel request has been processed by Diego.
 
 Cancel requests are idempotent and will be processed according to the state of the task when the request is executed.
 
-Cancelling a task that is in "SUCCEEDED" or "FAILED" state will return an error.
+Canceling a task that is in "SUCCEEDED" or "FAILED" state will return an error.
 
 
 ### Body Parameters
