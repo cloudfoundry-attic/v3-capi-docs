@@ -128,8 +128,7 @@ information for your packages, droplets, processes, tasks, and more.</p>
 
 </code></pre>
 
-<p>This endpoint retrieves a specific task on an app. A task can have states <code class="prettyprint">PENDING</code>, <code class="prettyprint">RUNNING</code>, <code class="prettyprint">SUCCEEDED</code>, and <code class="prettyprint">FAILED</code>.
-When a task&rsquo;s state is <code class="prettyprint">FAILED</code>, the failure reason will be in the <code class="prettyprint">result.failure_message</code> field.</p>
+<p>This endpoint retrieves a specific task on an app.</p>
 
 <h3 id="body-parameters">Body Parameters</h3>
 
@@ -398,11 +397,11 @@ When a task&rsquo;s state is <code class="prettyprint">FAILED</code>, the failur
 
 <p>This endpoint cancels a running task.</p>
 
-<p>Cancelled tasks will initially be in state &ldquo;CANCELING&rdquo; and will move to state &ldquo;FAILED&rdquo; once the cancel request has been processed by Diego.</p>
+<p>Canceled tasks will initially be in state &ldquo;CANCELING&rdquo; and will move to state &ldquo;FAILED&rdquo; once the cancel request has been processed by Diego.</p>
 
 <p>Cancel requests are idempotent and will be processed according to the state of the task when the request is executed.</p>
 
-<p>Cancelling a task that is in &ldquo;SUCCEEDED&rdquo; or &ldquo;FAILED&rdquo; state will return an error.</p>
+<p>Canceling a task that is in &ldquo;SUCCEEDED&rdquo; or &ldquo;FAILED&rdquo; state will return an error.</p>
 
 <h3 id="body-parameters">Body Parameters</h3>
 
@@ -1659,7 +1658,7 @@ When a task&rsquo;s state is <code class="prettyprint">FAILED</code>, the failur
       <span class="method-list-item-type">string</span>
     </h4>
 
-    <p class="method-list-item-description">State of the task. Possible states are PENDING, RUNNING, SUCCEEDED, and FAILED</p>
+    <p class="method-list-item-description">State of the task. Possible states are PENDING, RUNNING, SUCCEEDED, CANCELING, and FAILED</p>
   </li>
   <li class="method-list-item">
       <h4 class="method-list-item-label">
@@ -1833,8 +1832,7 @@ These overwrite and are appended to the app&rsquo;s running environment variable
 
 </code></pre>
 
-<p>This endpoint retrieves a specific task. A task can have states <code class="prettyprint">PENDING</code>, <code class="prettyprint">RUNNING</code>, <code class="prettyprint">SUCCEEDED</code>, and <code class="prettyprint">FAILED</code>.
-When a task&rsquo;s state is <code class="prettyprint">FAILED</code>, the failure reason will be in the <code class="prettyprint">result.failure_message</code> field.</p>
+<p>This endpoint retrieves a specific task.</p>
 
 <h3 id="body-parameters">Body Parameters</h3>
 
@@ -2133,11 +2131,11 @@ When a task&rsquo;s state is <code class="prettyprint">FAILED</code>, the failur
 
 <p>This endpoint cancels a running task.</p>
 
-<p>Cancelled tasks will initially be in state &ldquo;CANCELING&rdquo; and will move to state &ldquo;FAILED&rdquo; once the cancel request has been processed by Diego.</p>
+<p>Canceled tasks will initially be in state &ldquo;CANCELING&rdquo; and will move to state &ldquo;FAILED&rdquo; once the cancel request has been processed by Diego.</p>
 
 <p>Cancel requests are idempotent and will be processed according to the state of the task when the request is executed.</p>
 
-<p>Cancelling a task that is in &ldquo;SUCCEEDED&rdquo; or &ldquo;FAILED&rdquo; state will return an error.</p>
+<p>Canceling a task that is in &ldquo;SUCCEEDED&rdquo; or &ldquo;FAILED&rdquo; state will return an error.</p>
 
 <h3 id="body-parameters">Body Parameters</h3>
 
