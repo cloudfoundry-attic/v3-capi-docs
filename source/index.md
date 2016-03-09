@@ -13,7 +13,6 @@ includes:
   - apps/header
   - apps/tasks/get
   - apps/tasks/list
-  - apps/tasks/filter
   - apps/tasks/cancel
   - packages/header
   - packages/object
@@ -40,7 +39,6 @@ includes:
   - tasks/create
   - tasks/get
   - tasks/list
-  - tasks/filter
   - tasks/cancel
 
 search: true
